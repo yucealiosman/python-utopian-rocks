@@ -10,11 +10,6 @@ setup(
     author_email='aliosmanyuce@gmail.com',
     description='An API wrapper for utopian.rocks',
     install_requires=['requests'],
-    extras_require={
-        'dev': [
-            'requests_mock'
-        ]
-    },
     classifiers=(
         'Programming Language :: Python',
         'Programming Language :: Python :: 3.6',
