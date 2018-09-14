@@ -12,12 +12,15 @@ pip install python_utopian_rocks
 
 ## Usage
 
+```python
+
 from python_utopian_rocks.client import Client
 
 client = Client()
 ```
 
-Run  tests:
+
+## Run  tests:
 
 ```cmd
 python tests.py
@@ -58,39 +61,43 @@ These are the available parameters for making requests.
 
 In order to get posts :
 
-```
+```python
 client.get_posts(category="<value>", status="<value>", author="<value>", moderator="<value>", staff_picks="<value>")
-or 
+```
+or
+```python
 
-client.get_posts({"category":"<value>","author"="<value>"})
+client.get_posts({"category":"<value>","author":"<value>"})
 ```
 
 
-```
+
+
+
 
 For retriving all moderators:
 
+```python
+client.get_moderators()
 ```
-client.get_moderators();
-```
+
+
+
 
 For Statistics
 
+```python
+params = {"category":"<value>","author":"<value>"}
+client.get_contributors(params);
 ```
-/**
- * It will return total contributes by selected parameters
- * staff_picked should be true or false.
-
- */
-client.get_contributors(category, status, staff_picked);
-```
-
-```
-/**
  * You can use a specific date like 2020-06-24 or today, weekly.
- */
+```python
+
 client.get_staff_picks_by_date(specificDate);
 ```
+
+
+`
 
 ## Supported Tags
 
